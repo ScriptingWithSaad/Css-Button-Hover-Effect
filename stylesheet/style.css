@@ -1,0 +1,136 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+a {
+    position: relative;
+    color: #ef81ef;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0003);
+    overflow: hidden;
+}
+
+a:hover {
+    color: #fff;
+    background: #ef81ef;
+    box-shadow: 0px 0px 10px #ef81ef, 0px 0px 40px #ef81ef, 0px 0px 100px #ef81ef, 0px 0px 200px #ef81ef;
+}
+
+a span {
+    position: absolute;
+}
+
+span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 30%;
+    background: linear-gradient(90deg, transparent, #ef81ef);
+    animation: span1 0.6s linear infinite;
+}
+
+span:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    top: 30%;
+    right: 0;
+    background: linear-gradient(180deg, transparent, #ef81ef);
+    animation: span2 0.6s linear infinite;
+    animation-delay: 0.2s;
+}
+
+span:nth-child(3) {
+    height: 2px;
+    width: 100%;
+    right: 30%;
+    bottom: 0;
+    background: linear-gradient(270deg, transparent, #ef81ef);
+    animation: span3 0.6s linear infinite;
+    animation-delay: 0.4s;
+}
+
+span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    bottom: 30%;
+    left: 0;
+    background: linear-gradient(360deg, transparent, #ef81ef);
+    animation: span4 0.6s linear infinite;
+    animation-delay: 0.7s;
+}
+
+a:hover span {
+    opacity: 0;
+}
+
+a h4 {
+    animation: text 0.6s linear infinite;
+}
+
+@keyframes span1 {
+    0% {
+        left: -100%;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        left: 100%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes span2 {
+    0% {
+        top: -100%;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        top: 100%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes span3 {
+    0% {
+        right: -100%;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        right: 100%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes span4 {
+    0% {
+        bottom: -100%;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        bottom: 100%;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes text {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
